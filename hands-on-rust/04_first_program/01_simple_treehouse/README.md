@@ -1,5 +1,7 @@
 # The Greeter Program
 
+The program asks for the user's name, and greets the user.
+
 In this example we'll be covering getting user input, printing with and without place holders.
 
 
