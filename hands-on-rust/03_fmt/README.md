@@ -7,7 +7,9 @@ fmt is a Rust utility to fix formatting/styling issues \
 
 2. Change main.rs slightly so that it looks similar to \
 
+```
 fn main() {println!("Hello, world!");}
+```
 
 3. Run  
 
