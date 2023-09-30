@@ -8,7 +8,7 @@ This program let's you add people to the visitor's list.
 
 # Starting Point
 
-```
+```rust
 use std::io::stdin;
 
 struct Visitor {
@@ -60,7 +60,7 @@ fn main() {
 
 1. Printing a single variable is simple. When using more complex variables such a structs, you might want to consider using the __Derive__ feature. If every field of the structure supports __Derive__ then it is as simple as using __{:?}__ placeholder in __println!__.
 
-```
+```rust
 #[derive(Debug)]
 struct Visitor{
     name: String,
@@ -70,7 +70,7 @@ struct Visitor{
 
 2. Rust vectors are similar to arrays and are easy to substitute by adding vec! at the front fo the array declaration
 
-```
+```rust
 let visitor_list = vec![
     Visitor::new("bert", "Hello Bert, enjoy your treehouse."),
     Visitor::new("steve", "Hi Steve. Your milk is in the fridge"),
@@ -80,7 +80,7 @@ let visitor_list = vec![
 
 3. Keep running code without exiting when validating visitors using __loop__
 
-```
+```rust
 loop{
     println!("Hello, what's your name?(Leave empty and press ENTER to quit)");
     let name = what_is_your_name();
@@ -96,7 +96,7 @@ loop{
 
 4. Change rejection message
 
-```
+```rust
     match known_visitor {
         Some(visitor) => visitor.greet_visitor(),
         None => {
@@ -112,13 +112,13 @@ loop{
 
 5. Print the visitor list. Since you are using the __Derive__ macro you can do
 
-```
+```rust
 println!("The final list of visitors:");
 println!("{:#?}", visitor_list);
 ```
 
 # Solution
-```
+```rust
 fn main() {
     let mut visitor_list = vec![
         Visitor::new("bert", "Hello Bert, enjoy your treehouse."),
