@@ -7,12 +7,12 @@ fmt is a Rust utility to fix formatting/styling issues \
 
 2. Change main.rs slightly so that it looks similar to \
 
-```
+```bash
 fn main() {println!("Hello, world!");}
 ```
 
 3. Run  
 
-```
+```bash
 cargo fmt
 ```
