@@ -17,6 +17,7 @@ The modes are represented as an enum
 
 # Starting point
 
+## main.rs
 ```rust
 use bracket_lib::prelude::*;
 
@@ -37,6 +38,19 @@ fn main() -> BError {
     main_loop(context, State {})
 }
 
+```
+
+## Cargo.toml
+
+```rust
+[package]
+name = "hello_bterm"
+version = "0.1.0"
+authors = ["Jonathan Velasco <jonvelasco00@gmail.com>"]
+edition = "2021"
+
+[dependencies]
+bracket-lib="~0.8.1"
 ```
 
 # Instructions
