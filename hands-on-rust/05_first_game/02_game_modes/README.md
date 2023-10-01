@@ -124,7 +124,7 @@ fn restart(&mut self){
 }
 ```
 
-7. Add a __main_menu__ function to the State implementation to clear screen and print menu options
+7. Add a __main_menu__ function to the State implementation to clear screen and print menu options Now we need to check for input that triggers the menu options. BTerm includes a __Key__ variable as an __Option__ type. A shortened version of __match__ for single cases is __if let__. See page 122
 
 ```rust
 fn main_menu(&mut self, ctx: &mut BTerm){
@@ -132,12 +132,6 @@ fn main_menu(&mut self, ctx: &mut BTerm){
     ctx.print_centered(5, "Welcome to Flappy Dragon");
     ctx.print_centered(8, "(P) Play Game");
     ctx.print_centered(9, "(Q) Quit Game");
-}
-```
-
-8. Now we need to check for input that triggers the menu options. BTerm includes a __Key__ variable as an __Option__ type. A shortened version of __match__ for single cases is __if let__. See page 122
-
-```rust
 if let Some(key) = ctx.key{
 match key{
     VirtualKeyCode::P = self.restart(),
@@ -145,9 +139,10 @@ match key{
     _=>{}
 }
 }
+}
 ```
 
-9. Show menu options when game ends
+8. Show menu options when game ends
 
 ```rust
 fn dead(&mut self, ctx: &mut BTerm){
@@ -166,7 +161,7 @@ fn dead(&mut self, ctx: &mut BTerm){
 }
 ```
 
-10. Run the program and test the game control flow
+9. Run the program and test the game control flow
 
 ```rust
 cargo run
