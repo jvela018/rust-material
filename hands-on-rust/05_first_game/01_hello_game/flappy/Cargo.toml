@@ -2,7 +2,7 @@
 name = "hello_bterm"
 version = "0.1.0"
 authors = ["Jonathan Velasco <jonvelasco00@gmail.com>"]
-edition = "2023"
+edition = "2021"
 
 [dependencies]
 bracket-lib="~0.8.1"
