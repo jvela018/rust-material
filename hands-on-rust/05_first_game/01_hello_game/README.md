@@ -16,8 +16,9 @@ cargo new flappy
 [package]
 name = "hello_bterm"
 version = "0.1.0"
-authors = ["Herbert Wolverson <herberticus@gmail.com>"]
-edition = "2018"
+authors = ["Jonathan Velasco <jonvelasco00@gmail.com>"]
+edition = "2023"
+
 [dependencies]
 bracket-lib="~0.8.1"
 ```
