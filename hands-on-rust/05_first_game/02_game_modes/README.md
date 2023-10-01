@@ -134,7 +134,7 @@ fn main_menu(&mut self, ctx: &mut BTerm){
     ctx.print_centered(9, "(Q) Quit Game");
 if let Some(key) = ctx.key{
 match key{
-    VirtualKeyCode::P = self.restart(),
+    VirtualKeyCode::P => self.restart(),
     VirtualKeyCode::Q => ctx.quitting = true,
     _=>{}
 }
