@@ -1,8 +1,9 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 // https://en.wikipedia.org/wiki/Dangling_pointer
 
-/*
+
 void f() {
 	int *x = malloc(sizeof(int));
 	*x = 1024;
@@ -46,14 +47,14 @@ void f3() {
 
 	printf("%p\n", x);
 }
-*/
+
 void f4() {
 	unsigned long a[1];
 	a[3] = 0x7ffff7b36cebUL;
 }
 
 int main(int argc, char **argv) {
-/*
+
 	printf("f  >>\n");
 	f();
 
@@ -65,7 +66,7 @@ int main(int argc, char **argv) {
 
 	printf("f3 >>\n");
 	f3();
-*/
+
 	printf("f4 >>\n");
 	f4();
 
