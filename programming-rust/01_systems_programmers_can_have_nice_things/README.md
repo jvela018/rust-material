@@ -90,4 +90,12 @@ gcc -o memory-unsafety memory-unsafety.c
 
 - Of course, there are still plenty of bugs that Rust cannot detect. But in practice, taking undefined behavior off the table substatially changes the cahracter of development for the better.
 
+- Concurrency is notoriously difficult to use correctly in C and C++, and in modern times parallelism is too important to modern machines to treat them as a method of last resort. 
 
+- Note that some of the same restrictions that ensure memory safety in Rust, also ensure that Rust programs are free of data races. 
+
+- Hence, Rust is an excellent language to explode the abilities of modern multicore machines.
+
+- And yet Rust is still fast. But what does that mean? One can write slow code in any general-purpose language. IT would be more precise to say that, if you're ready to make the investment to design your program to make the best use of the underlying machine's capabilities, Rust supports you in that effort. The language is designed with efficient defaults and gives you the ability to control how memory gets used and how the processor's attention is spent.
+
+- Last but not least, Rust makes collaboration easier. Rust's package manager and build tool, Cargo, makes it easy to use libraries published by others on Rust's public package repository, the crates.io website. Cargo takes care of downloading libraries together with whatever otehr libraries it uses in turn, and linking the whole lot together. IT's teh answer to NPM or RubiGems with emphasis on soud version management and reproducible builds.
