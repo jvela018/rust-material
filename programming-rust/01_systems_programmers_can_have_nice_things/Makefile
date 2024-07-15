@@ -1,7 +1,8 @@
 CC=gcc
+CFLAGS=
 
 memory-unsafety: memory-unsafety.c
-	$(CC) -o $@ $< 
+	$(CC) $(CFLAGS) -o $@ $< 
 
 .PHONY: clean
 clean:

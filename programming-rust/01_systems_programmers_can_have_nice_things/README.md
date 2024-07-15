@@ -55,4 +55,39 @@ gcc -o memory-unsafety memory-unsafety.c
 
 ## Some examples on why Rust's popularity has increased - and will continue to increase
 
+### From C/C++ to Rust?
+
+- Case f4 of the previous example is flawed. THe array __a__ is only one element long, so using a[3] is, according to the C programming language standard, undefined behavior
+    
+    - Undefined Bahavior, upon use of a nonportable or erroneus program construct or of erroneous data, for which this International Standard imposes no requirements (__DOUBLE CHECK THIS__)
+
+- Undefined behavior is not only leads to unpredicatble behavior but the standard explicitly allows the program to do anything at all. 
+
+- C and C++ have hundreds of rules for avoiding undefined behavior. They're mostly common sense:
+    - Don't access memory you shouldn't
+    - Don't let arithmetic operations overflow
+    - Don't divide by zero, etc.
+
+- The compiler doesn't enforce these rules; it has no obligation to detect even blatant violations.
+
+- In our example - f4 compiles without errors or warnigns. The responsibility falls entirely on the programmer.
+
+- Sure, your C/C++ compiler to make programs they translate report undefined behavior, but can you capture every single one, for every single project?
+
+- Some issues might just show as a strange message or crash related to a quality issue, but inadvertently undefined behavior has also been a major cause of security flaws as it propagates from one computer to other as shown in 1988 by Worm's variation technique.
+
+- Can we do any better?
+
+- The Rust language makes you a simple promise: if your program passes the compiler's checks, it is free of undefined behavior. 
+
+- Dangling pointers, double-frees and null pointer dereferences are all caught at compile time. 
+
+- Array references are secured with a mix of compile-time and run-time checks, so there are no buffer overruns - the equivalent in Rust exits safely with an error message.
+
+- How does Rust do this? By imposing more restrictions on your code than C and C++ do. 
+
+- By being able to trust the language to catch more mistakes, we're encouraged to try more ambitious projects. Modifying large, complex programs is less risky when you know that issues of memory management and pointer validity are taken care of.
+
+- Of course, there are still plenty of bugs that Rust cannot detect. But in practice, taking undefined behavior off the table substatially changes the cahracter of development for the better.
+
 
