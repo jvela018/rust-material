@@ -31,3 +31,28 @@ Systems programming is everywhere. Imagine a laptop, you close it, the operating
     - Games
     - and more ...
 
+
+## Let us start with an example
+
+What does this C program do?
+__ THIS EXAMPLE IS SUPPOSED TO GIVE DIFFERENT ERRORS IN DIFFERENT MACHINES BUT IT SEEMS LIKE IT DOES THE SAME THING ON MINE  __ 
+
+```c
+int main (int argc, char **argv){
+    unsigned long a[1];
+    a[3] = 0x7ffff7b36cebUL;
+    return 0;
+}
+```
+Instead of using the example from the book, I'm using this example https://gist.github.com/piaoger/46c1096319fcba07461c4c1cfb2dcaa5. Note that case 4, is exactly the same as the one from the book.
+
+__ I'M BUILDING IT USING __
+
+```bash
+gcc -o memory-unsafety memory-unsafety.c
+```
+
+
+## Some examples on why Rust's popularity has increased - and will continue to increase
+
+
