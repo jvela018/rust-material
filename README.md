@@ -22,3 +22,13 @@ List of Books:
     Focus: Rust basics \
     Level: Beginner \
     Covers Rust 1.50 
+
+3) Rust for the IoT - Building Internet of THings Apps with Rust and Raspberry Pi
+    Author: Joseph Faisal Nusairat
+    PUblisher: Apress
+    Edition: 1st
+    Published: September 15th 2020
+    ISBN: 1484258592
+    Focus: Embedded, Microservices and Rust
+    Level: Intermediate
+    
