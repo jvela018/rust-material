@@ -28,3 +28,5 @@ fn main() {
     }).http(\"localhost:3000\").unwrap();
 }
 ```
+
+- Open a web browser and type in localhost:3000 in the address bar. What do you see?
